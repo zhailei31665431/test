@@ -117,7 +117,7 @@ var openChart = exports.openChart = function openChart(data) {
     name: data['title'][0]["DisplayData"],
     users: userList,
     type: 'num',
-    user_src: true
+    user_src: '1'
     // mobileurl:window.location.origin+'/eps/#/orderHomepage?orderid='+orderNumber
   }, {
     success: function success(res) {},
