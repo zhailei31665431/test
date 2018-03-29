@@ -145,7 +145,12 @@ var Todos = function (_Component) {
 				dispatch({
 					type: "todos/fetch",
 					payload: {
-						FilterCondition: ''
+						FilterCondition: '',
+						loading: {
+							loading: true,
+							fix: true,
+							hide: false
+						}
 					}
 				});
 			});
