@@ -1,7 +1,17 @@
+.icon-input-remove {
+  display: inline-block;
+  background-image: url(../images/sprite.png);
+  background-position: 0rem -0.8091787439613527rem;
+  background-size: 0.48309178743961356rem;
+  background-repeat: no-repeat;
+  width: 0.30193236714975846rem;
+  height: 0.3140096618357488rem;
+}
+
 .icon-input-search {
   display: inline-block;
   background-image: url(../images/sprite.png);
-  background-position: 0rem -1.9444444444444444rem;
+  background-position: 0rem -2.475845410628019rem;
   background-size: 0.48309178743961356rem;
   background-repeat: no-repeat;
   width: 0.3743961352657005rem;
@@ -31,7 +41,7 @@
 .icon-money-title {
   display: inline-block;
   background-image: url(../images/sprite.png);
-  background-position: 0rem -2.5483091787439616rem;
+  background-position: 0rem -3.079710144927536rem;
   background-size: 0.48309178743961356rem;
   background-repeat: no-repeat;
   width: 0.4951690821256039rem;
@@ -41,7 +51,7 @@
 .icon-todo-people {
   display: inline-block;
   background-image: url(../images/sprite.png);
-  background-position: 0rem -1.3647342995169083rem;
+  background-position: 0rem -1.896135265700483rem;
   background-size: 0.48309178743961356rem;
   background-repeat: no-repeat;
   width: 0.3502415458937198rem;
@@ -51,7 +61,7 @@
 .icon-todo-type {
   display: inline-block;
   background-image: url(../images/sprite.png);
-  background-position: 0rem -0.8091787439613527rem;
+  background-position: 0rem -1.3405797101449275rem;
   background-size: 0.48309178743961356rem;
   background-repeat: no-repeat;
   width: 0.32608695652173914rem;

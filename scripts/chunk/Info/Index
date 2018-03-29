@@ -618,11 +618,10 @@ var MoneyDetail = function (_Component) {
 					} }),
 				_react2.default.createElement(
 					'div',
-					{ className: 'money-info-detail-info border-line-h after', style: {
-							width: clientWidth + 'px',
-							left: this.state.hide ? '100%' : '0px'
+					{ className: 'money-info-detail-info border-line-h after animated fadeInUp', style: {
+							width: clientWidth + 'px'
 						} },
-					_.map(data, function (item) {
+					_.map(newData, function (item) {
 						return _react2.default.createElement(
 							'div',
 							{ className: 'money-detail-info-i' },

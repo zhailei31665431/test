@@ -224,10 +224,16 @@ body {
   border-radius: 0.193236715rem;
   overflow: hidden;
 }
-.todos-search i {
+.todos-search i.icon-input-search {
   float: left;
   margin-top: 0.4106280193rem;
   margin-left: 0.4830917874rem;
+  cursor: pointer;
+}
+.todos-search i.icon-input-remove {
+  float: right;
+  margin-top: 0.4589371981rem;
+  margin-right: 0.4830917874rem;
   cursor: pointer;
 }
 .todos-search .am-list-item {
@@ -235,6 +241,7 @@ body {
   height: 0.7246376812rem;
   line-height: 0.7246376812rem;
   margin-left: 1.0869565217rem;
+  margin-right: 1.0869565217rem;
 }
 .todos-search .am-list-item input {
   width: 100%;
@@ -524,16 +531,16 @@ body {
           animation-fill-mode: backwards;
 }
 .money-info-detail .money-info-detail-info {
-  display: block;
+  display: none;
   position: fixed;
-  bottom: 1.4251207729rem;
-  left: 100%;
+  bottom: 1.4492753623rem;
+  left: 0;
   right: 0;
   padding: 0.6280193237rem 0.4830917874rem;
   background: #fff;
   -webkit-box-shadow: 0 -1px 10px 0 rgba(0, 0, 0, 0.04);
           box-shadow: 0 -1px 10px 0 rgba(0, 0, 0, 0.04);
-  z-index: 7;
+  z-index: 5;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -595,6 +602,7 @@ body {
   display: block;
 }
 .money-info-detail.active .money-info-detail-info {
+  display: block;
   -webkit-box-shadow: 0 -1px 10px 0 rgba(0, 0, 0, 0.04);
           box-shadow: 0 -1px 10px 0 rgba(0, 0, 0, 0.04);
 }

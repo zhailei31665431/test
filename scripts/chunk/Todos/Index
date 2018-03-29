@@ -114,6 +114,12 @@ var Todos = function (_Component) {
 			if (data['FilterCondition'] == text) {
 				return;
 			}
+			dispatch({
+				type: "todos/changeData",
+				payload: {
+					FilterCondition: text
+				}
+			});
 			clearTimeout(this.searchTime);
 			this.searchTime = setTimeout(function () {
 				dispatch({
@@ -123,6 +129,26 @@ var Todos = function (_Component) {
 					}
 				});
 			}, 500);
+		}
+	}, {
+		key: 'removeInput',
+		value: function removeInput(evt) {
+			var dispatch = this.props.dispatch;
+			$('input').val('');
+			dispatch({
+				type: "todos/changeData",
+				payload: {
+					FilterCondition: ''
+				}
+			});
+			setTimeout(function () {
+				dispatch({
+					type: "todos/fetch",
+					payload: {
+						FilterCondition: ''
+					}
+				});
+			});
 		}
 	}, {
 		key: 'render',
@@ -158,11 +184,7 @@ var Todos = function (_Component) {
 						})
 					);
 					if (data.noMore) {
-						loadMoreHtml = _react2.default.createElement(
-							'div',
-							{ className: 'todos-nomore' },
-							'\u6CA1\u6709\u66F4\u591A\u4E86\uFF01'
-						);
+						// loadMoreHtml=<div className="todos-nomore">没有更多了！</div>
 					} else {
 						loadMoreHtml = _react2.default.createElement(
 							'div',
@@ -201,7 +223,10 @@ var Todos = function (_Component) {
 							'div',
 							{ className: 'todos-search-w' },
 							_react2.default.createElement('i', { className: 'icon-input-search' }),
-							_react2.default.createElement(_antdMobile.InputItem, { placeholder: '\u641C\u7D22\u5355\u53F7', onBlur: function onBlur(e) {
+							data['FilterCondition'].length != 0 ? _react2.default.createElement('i', { className: 'icon-input-remove', onClick: function onClick(e) {
+									return _this2.removeInput();
+								} }) : '',
+							_react2.default.createElement(_antdMobile.InputItem, { value: data['FilterCondition'], placeholder: '\u641C\u7D22\u5355\u53F7', onBlur: function onBlur(e) {
 									return _this2.InputBlur(e);
 								}, onFocus: function onFocus(e) {
 									return _this2.InputFocus(e);
