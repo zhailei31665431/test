@@ -491,7 +491,7 @@ var Info = function (_Component) {
     value: function openMoneyInfo(data) {
       var info = this.props.info;
       var rownum = data['_RowNumber'] || data['rownum'];
-      jw.pushWebView(window.location.origin + '/#/money-info?ProcInstId=' + info['ProcInstID'] + '&RowNumber=' + rownum + '&GridID=' + info['panelId'] + '&LanCode=CN&EmpCode=' + window.userinfo["id"] + '&jwstyle=077655');
+      jw.pushWebView(window.location.origin + window.location.pathname + '#/money-info?ProcInstId=' + info['ProcInstID'] + '&RowNumber=' + rownum + '&GridID=' + info['panelId'] + '&LanCode=CN&EmpCode=' + window.userinfo["id"] + '&jwstyle=077655');
     }
   }, {
     key: 'setHeight',
